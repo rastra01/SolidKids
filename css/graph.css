@@ -1,0 +1,149 @@
+.card-container2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  max-width: 100%;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: flex-start;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 48%;
+  height: 40vh;
+  text-align: center;
+  overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.card h2 {
+  font-size: 15px;
+  text-align: left;
+  padding-left: 10px;
+  color: #ffffff;
+}
+
+.judul {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.grafik {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px; /* Adjust as needed */
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.additional-info {
+  display: none;
+}
+
+.card.expanded .additional-info {
+  display: block;
+}
+
+/* Additional adjustments for better appearance */
+body {
+  font-family: Arial, sans-serif;
+}
+
+.main {
+  padding: 20px;
+}
+
+.card-container .card,
+.card-container2 .card {
+  margin: 10px 0;
+}
+
+.arrow {
+  font-size: 16px;
+  color: #ffffff;
+  margin-left: 10px;
+}
+
+.video-card {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.cardllm {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 48%;
+  text-align: center;
+  overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.judulllm {
+  background-color: #e0bb20;
+  border-radius: 8px 8px 0 0;
+  padding: 10px;
+  text-align: left;
+  color: #fff;
+}
+
+.judulllm h2 {
+  margin: 0;
+  color: #fff;
+  text-align: left;
+}
+
+.output {
+  padding: 20px;
+  background-color: #fff;
+  height: 100%; /* Pastikan tinggi konten card mengisi seluruh tinggi card */
+  overflow-y: auto; /* Tambahkan scrollbar vertikal jika konten berlebih */
+  box-sizing: border-box; /* Memastikan padding termasuk dalam ukuran card */
+}
+.output p {
+  margin-bottom: 20px; /* Tambahkan margin bawah pada paragraf */
+}
+.card-mini {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  height: 20vh;
+  text-align: center;
+  overflow: hidden; /* Ensure content doesn't overflow */
+  display: flex;
+  justify-content: space-around;
+}
+.grafik2,
+.output2 {
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  color: white;
+  width: 70%;
+  align-content: center;
+  text-align: left;
+  padding-left: 20px;
+}
+.icon {
+  width: 30%;
+  align-content: center;
+}
+
+.grafik2 h1,
+.output2 h1 {
+  font-size: 50px;
+}

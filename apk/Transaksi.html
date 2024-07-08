@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Transaksi.css">
+    <title>Payment Form</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Pilih Metode Pembayaran dan Masukkan Informasi Pembayaran</h2>
+        <form id="payment-form" action="/process-payment" method="POST">
+            <div class="form-group">
+                <label>Metode Pembayaran:</label>
+                <div class="radio-group">
+                    <input type="radio" id="method-mbanking" name="method" value="mbanking" required>
+                    <label for="method-mbanking">m-Banking</label>
+                    
+                    <input type="radio" id="method-emoney" name="method" value="emoney" required>
+                    <label for="method-emoney">E-Money</label>
+                </div>
+            </div>
+            
+            <div class="payment-info payment-info-mbanking">
+                <div class="form-group">
+                    <label for="bank">Nama Bank:</label>
+                    <input type="text" id="bank" name="bank" required>
+                </div>
+                <div class="form-group">
+                    <label for="account-number">Nomor Rekening:</label>
+                    <input type="text" id="account-number" name="account_number" required>
+                </div>
+                <div class="form-group">
+                    <label for="account-holder">Nama Pemegang Rekening:</label>
+                    <input type="text" id="account-holder" name="account_holder" required>
+                </div>
+            </div>
+            
+            <div class="payment-info payment-info-emoney">
+                <div class="form-group">
+                    <label for="emoney-provider">Penyedia E-Money:</label>
+                    <input type="text" id="emoney-provider" name="emoney_provider" required>
+                </div>
+                <div class="form-group">
+                    <label for="emoney-number">Nomor E-Money:</label>
+                    <input type="text" id="emoney-number" name="emoney_number" required>
+                </div>
+                <div class="form-group">
+                    <label for="emoney-holder">Nama Pemegang E-Money:</label>
+                    <input type="text" id="emoney-holder" name="emoney_holder" required>
+                </div>
+            </div>
+            
+            <button type="submit">Bayar</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const paymentForm = document.getElementById('payment-form');
+            const mbankingRadio = document.getElementById('method-mbanking');
+            const emoneyRadio = document.getElementById('method-emoney');
+            const mbankingInfo = document.querySelector('.payment-info-mbanking');
+            const emoneyInfo = document.querySelector('.payment-info-emoney');
+
+            function togglePaymentInfo() {
+                if (mbankingRadio.checked) {
+                    mbankingInfo.style.display = 'block';
+                    emoneyInfo.style.display = 'none';
+                } else if (emoneyRadio.checked) {
+                    mbankingInfo.style.display = 'none';
+                    emoneyInfo.style.display = 'block';
+                }
+            }
+
+            mbankingRadio.addEventListener('change', togglePaymentInfo);
+            emoneyRadio.addEventListener('change', togglePaymentInfo);
+            togglePaymentInfo(); // Initialize the visibility on page load
+        });
+    </script>
+</body>
+</html>

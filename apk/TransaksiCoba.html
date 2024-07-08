@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pembayaran</title>
+    <link rel="stylesheet" href="css/Transaksi.css">
+</head>
+<body>
+    <h2>Pilih Metode Pembayaran dan Masukkan Informasi Pembayaran</h2>
+    <form id="payment-form" action="/process-payment" method="POST">
+        <label for="method-mbanking">Metode Pembayaran:</label>
+        
+        <input type="radio" id="method-mbanking" name="method" value="mbanking" required>
+        <label for="method-mbanking">m-Banking</label>
+        
+        <input type="radio" id="method-emoney" name="method" value="emoney" required>
+        <label for="method-emoney">E-Money</label>
+
+        <div class="payment-info payment-info-mbanking">
+            <label for="bank">Nama Bank:</label>
+            <input type="text" id="bank" name="bank" required>
+            
+            <label for="account-number">Nomor Rekening:</label>
+            <input type="text" id="account-number" name="account_number" required>
+            
+            <label for="account-holder">Nama Pemegang Rekening:</label>
+            <input type="text" id="account-holder" name="account_holder" required>
+        </div>
+        
+        <div class="payment-info payment-info-emoney">
+            <label for="emoney-provider">Penyedia E-Money:</label>
+            <input type="text" id="emoney-provider" name="emoney_provider" required>
+            
+            <label for="emoney-number">Nomor E-Money:</label>
+            <input type="text" id="emoney-number" name="emoney_number" required>
+            
+            <label for="emoney-holder">Nama Pemegang E-Money:</label>
+            <input type="text" id="emoney-holder" name="emoney_holder" required>
+        </div>
+        
+        <button type="submit">Bayar</button>
+    </form>
+</body>
+</html>

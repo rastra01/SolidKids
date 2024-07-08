@@ -1,0 +1,6 @@
+{
+    "require": {
+        "lucianotonet/groq-php": "^0.0.4",
+        "erusev/parsedown": "^1.7"
+    }
+}

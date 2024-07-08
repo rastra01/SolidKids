@@ -1,0 +1,137 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #b7c9f2, #9195f6);
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.form-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../img/login3.gif') no-repeat center center;
+    background-size: cover;
+    border-radius: 0 25px 25px 0; /* Removed border radius */
+}
+
+.login-form {
+    flex: 1;
+    padding: 3rem;
+    background: #B7C9F2; /* Changed background to white */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.login-form h2 {
+    margin-bottom: 1rem; /* Reduced bottom margin */
+    font-size: 24px; /* Adjusted font size */
+    font-weight: bold;
+    color: #4a4a4a;
+}
+
+.login-form form {
+    width: 100%;
+}
+
+.login-form label {
+    display: none; /* Removed label display as it's not visible in the design */
+}
+
+.login-form input {
+    width: 100%; /* Adjusted width to 100% */
+    padding: 1rem;
+    margin-bottom: 1rem; /* Reduced bottom margin */
+    border: 1px solid #e0e0e0; /* Adjusted border color */
+    border-radius: 5px; /* Adjusted border radius */
+    font-size: 16px;
+    background-color: #fafafa; /* Changed background color */
+    color: #4a4a4a;
+}
+
+.login-form button {
+    width: 100%; /* Adjusted width to 100% */
+    padding: 1rem;
+    border: none;
+    background-color: #9195F6; /* Changed background color to match the button */
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px; /* Adjusted border radius */
+    transition: background-color 0.3s ease;
+    margin-top: 1rem; /* Added top margin */
+}
+
+.login-form .google-login {
+    width: 100%; /* Adjusted width to 100% */
+    padding: 1rem;
+    margin-bottom: 1rem; /* Added bottom margin */
+    border: 1px solid #e0e0e0; /* Added border for Google login button */
+    border-radius: 5px; /* Added border radius */
+    font-size: 16px;
+    background-color: #fff;
+    color: #4a4a4a;
+    text-align: center; /* Centered the text */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.login-form .google-login img {
+    margin-right: 10px; /* Added margin to the Google logo */
+}
+
+.login-form .forgot-password {
+    color: #fff; /* Changed color to match the design */
+    text-align: right;
+    width: 100%;
+    margin-bottom: 1rem; /* Added bottom margin */
+}
+
+.login-form .create-account {
+    color: #fff; /* Changed color to match the design */
+    text-align: center;
+    width: 100%;
+    margin-top: 1rem; /* Added top margin */
+}
+
+
+.login-form button:hover {
+    background-color: #3a3a3a;
+}
+
+.login-form .text {
+    margin-top: 10px;
+    text-align: center; /* Adjusted alignment for the link */
+}
+
+.login-form .text a {
+    color: #4a4a4a;
+    text-decoration: none;
+    font-size: 14px; /* Adjusted font size for the link */
+}
+
+.login-form .error {
+    color: red;
+    font-style: italic;
+    margin-top: 10px;
+    text-align: center; /* Adjusted alignment for error message */
+}

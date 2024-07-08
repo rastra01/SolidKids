@@ -1,0 +1,110 @@
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 18px; /* Increased font size */
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background: #343a40;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+  padding: 20px;
+}
+
+.sidebar .brand img {
+  width: 150px; /* Increased logo size */
+  height: auto;
+  margin-bottom: 20px; /* Added space below the logo */
+}
+
+.sidebar nav {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.sidebar .nav-item {
+  width: 100%;
+  margin-bottom: 10px; /* Added space between nav items */
+}
+
+.sidebar .nav-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: #adb5bd;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+  width: 100%;
+}
+
+.sidebar .nav-link:hover {
+  background: #495057;
+  color: #fff;
+}
+
+.sidebar .nav-link i {
+  width: 20px;
+  margin-right: 10px; /* Added space between icon and text */
+}
+
+.sidebar .navlink ul {
+  list-style-type: none;
+  padding: 0;
+  margin: o;
+}
+
+.sidebar .navlink li {
+  margin: 10px 0;
+}
+
+.sidebar .nav-link a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 10px;
+  background-color: #e3e3e3;
+  border-radius: 5px;
+}
+
+.sidebar .help-center,
+.sidebar .logout {
+  width: 100%;
+  text-align: left; /* Align text to the left */
+  margin-top: 20px;
+}
+
+.sidebar .help-center a,
+.sidebar .logout a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the left */
+  padding: 10px 20px;
+  color: #adb5bd;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+  width: 100%;
+}
+
+.sidebar .help-center a:hover,
+.sidebar .logout a:hover {
+  background: #495057;
+  color: #fff;
+}
+
+.sidebar .text-red {
+  color: #dc3545;
+}
+
+.sidebar .text-red:hover {
+  color: #fff;
+}
+
+li {
+  list-style: none;
+}

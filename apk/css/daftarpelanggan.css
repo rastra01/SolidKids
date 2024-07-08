@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+body {
+    font-family: 'Comic Neue', cursive;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.logo-container, .picture-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo, .picture {
+    max-width: 100%;
+    height: auto;
+}
+
+.logo {
+    max-width: 25%;
+}
+
+.picture {
+    max-width: 25%;
+}
+
+.intro {
+    font-size: 1.25em;
+    margin: 20px 0;
+    color: #FB88B4;
+    text-align: center;
+}
+
+.registration-form {
+    background-color: #ACCAFF;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.registration-form label {
+    display: block;
+    margin-top: 10px;
+    color: #FB88B4;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="password"],
+.registration-form input[type="date"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    color: #000;
+    font-family: 'Comic Neue', cursive;
+    font-size: 1em;
+}
+
+.registration-form input[type="text"]::placeholder,
+.registration-form input[type="email"]::placeholder,
+.registration-form input[type="password"]::placeholder,
+.registration-form input[type="date"]::placeholder {
+    color: #FB88B4; /* Placeholder color */
+}
+
+.registration-form input[type="radio"] {
+    margin: 0 10px 0 0;
+}
+
+.registration-form input[type="radio"] + label {
+    display: inline-block;
+    color: #FB88B4;
+}
+
+.checkbox-container {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-container label {
+    margin: 0;
+    margin-left: 10px;
+    color: #FB88B4;
+}
+
+.registration-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #FB88B4;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+    font-family: 'Comic Neue', cursive;
+}
+
+.registration-form button:hover {
+    background-color: #FB88B4;
+}

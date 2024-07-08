@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Konten1.css">
+    <link rel="stylesheet" href="'https://fonts.googleapis.com/css?family=Mukta'">
+    <title>Solid Kids</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><img src="img/4-removebg-preview.png" alt="solid kids" height="80px" width="80px"></div>
+            <ul class="links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Video</a></li>
+                <li><a href="about.html">Tentang</a></li>
+            </ul>
+            <button class="Masuk" type="button" onclick="window.location.href='login.html'"> Masuk</button>
+        </div>        
+    </header>
+    <div class="Judul">
+        <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExenl4MDE1Znhycjd2NzgyZnplZWcyYnVlZmNrNjllZGJ1Mjg0dW5oZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/BH5Sntqk2kKI27tyaN/giphy.gif" alt="gambar" style="width: 250px; height: 250px">
+        <a>Warna & Bentuk</a>
+    </div>
+    <div class="vidkon">
+        <div class="vid1">
+            <video width="400" controls class="video-popup">
+                <source src="video/Baby Shark Belajar Angka & Huruf _ Kumpulan Lagu Baby Shark _ Kartun Anak _ Pinkfong & Baby Shark.mp4" type="video/mp4">
+            </video>
+            <h3>Berlatih jujur</h3>
+        </div>
+        <div class="vid1">
+            <video width="400" controls class="video-popup">
+                <source src="video/BELAJAR MENGENAL HURUF ABC dalam bahasa indonesia.mp4" type="video/mp4">
+            </video>
+            <h3>Berlatih jujur</h3>
+        </div>
+        <div class="vid1">
+            <video width="400" controls class="video-popup">
+                <source src="video/Bob Kereta Api - Petualangan Alfabet _ Lagu anak anak _ Bayi sajak _ Video edukasi.mp4" type="video/mp4">
+            </video>
+            <h3>Berlatih jujur</h3>
+        </div>
+        <div class="vid1">
+            <video width="400" controls class="video-popup">
+                <source src="video/Lagu abc _ Lagu anak _ Lagu anak Indonesia.mp4" type="video/mp4">
+            </video>
+            <h3>Berlatih jujur</h3>
+        </div>
+        <div class="vid1">
+            <video width="400" controls class="video-popup">
+                <source src="video/Mengenal Angka dari 1 sampai 100 _ CilukPa.mp4" type="video/mp4">
+            </video>
+            <h3>Berlatih jujur</h3>
+        </div>
+        <div class="vid1">
+            <video width="400" controls class="video-popup">
+                <source src="video/Bob Kereta Api - Petualangan Alfabet _ Lagu anak anak _ Bayi sajak _ Video edukasi.mp4" type="video/mp4">
+            </video>
+            <h3>Berlatih jujur</h3>
+        </div>
+    </div>
+    <div class="overlay"></div>   
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const videos = document.querySelectorAll('.video-popup');
+            const overlay = document.querySelector('.overlay');
+    
+            videos.forEach(video => {
+                video.addEventListener('play', function() {
+                    videos.forEach(v => {
+                        if (v !== video) {
+                            v.pause();
+                        }
+                    });
+                    video.classList.add('playing');
+                    overlay.classList.add('active');
+                });
+    
+                video.addEventListener('pause', function() {
+                    video.classList.remove('playing');
+                    overlay.classList.remove('active');
+                });
+    
+                overlay.addEventListener('click', function() {
+                    videos.forEach(video => video.pause());
+                });
+            });
+        });
+    </script>
+    <footer>
+        <div class="foot">
+            <div class="foot1">
+                <a>Dipersembahkan oleh:</a>
+                <img src="img/4-removebg-preview.png" alt="logo" height="80px" width="80px">
+            </div>
+            <div class="foot2">
+                <a>Tim Pendukung</a>
+            </div>
+            <div class="foot3">
+                <a>Kontak Kami:</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
